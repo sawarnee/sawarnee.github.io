@@ -76,11 +76,17 @@
           <div class="subheading mb-5"> <!-- (+91) 7042725575 &nbsp;&nbsp; · &nbsp;&nbsp; -->
             <a href="mailto:sawarnee.work@gmail.com">sawarnee.work@gmail.com</a>
           </div>
-          <p class="mb-5">
+          <!-- <p class="mb-5">
       		Highly accomplished <b>Solutions Architect</b> with 7 years of dedicated experience designing, deploying, troubleshooting and managing
 complex, secure, and cost-effective cloud solutions on AWS. Proven ability to translate business requirements into technical
 blueprints, lead stakeholder discussions, and drive adoption of cloud-native technologies. Seeking a challenging SA role to leverage
 deep expertise in cloud architecture and deliver transformative business value.
+	  </p> -->
+          <p class="mb-5">
+      		Solutions Architect with 7+ years of experience at Amazon Web Services designing, deploying, and managing complex cloud solutions.
+Proven track record of translating business requirements into scalable technical architectures, driving multi-million dollar deals, and
+delivering measurable cost optimization for enterprise and public sector clients. AWS Direct Connect SME with deep expertise in
+networking, infrastructure, serverless, and AI/ML architectures.
 	  </p>
           <ul class="list-inline list-social-icons mb-0 pull-right">
             <li class="list-inline-item">
@@ -151,12 +157,22 @@ databases (under $2,000/month at maximum capacity). The successful two-domain pi
 leading to the customer's decision to expand to a full <b>73-disease implementation</b> by the end of 2025.
 				</li>
                 <li>
+					<b>Ministry of Women & Child Development (MWCD) - AI-Powered Nutritional Analysis for Poshan Tracker:</b> Built and
+demonstrated a POC using Amazon Bedrock (Claude) multimodal vision models to analyze meal photographs from
+Anganwadi Centers, automatically identifying food items, estimating portions, and scoring nutritional compliance
+against ICDS norms. Fully serverless architecture (Bedrock, Lambda, S3, DynamoDB) ensures <b>zero infra management,
+pay-per-use cost efficiency, and elastic scalability to 12L+ daily images across 14L centers serving ~9Cr beneficiaries</b>.
+The successful POC opened discussions on broader AI-driven image analysis use cases, including AI-based child
+height/weight estimation from images — currently in active development.
+				</li>
+                <li>
 					<b>India Central Government and PSUs – Network setup expertise</b> Have been involved in some of the largest public sector opportunities like
 NIC migration to <b>AWS Outposts</b> (Meghraj 2.0) and <b>SAP RISE</b> workload migration to AWS for India PSUs (GAIL, CIL and BL).
 				</li>
                 <li>
-					<b>Summits and Demo booths:</b> Supported or represented AWS at multiple demo/booth showcase opportunities like India Impact AI summit, UP Healthcare and AI Conclave
-					(where I got the opportunity to present AWS in front of UP Chief Minister), AWS Public Sector New Delhi Symposium, NHA NHCX Hackathon and Arohana (Deloitte event). 
+					<b>Summits, Demo booths and Trainings:</b> Supported or represented AWS at multiple demo/booth showcase opportunities like India Impact AI summit, UP Healthcare and AI Conclave
+					(where I got the opportunity to present AWS in front of UP Chief Minister), AWS Public Sector New Delhi Symposium, NHA NHCX Hackathon and Arohana (Deloitte event). Have also delivered
+					a session on CDN and Edge services to NIC officers at IIT campus, Greater Noida.
 				</li>
                 <li>
 					<b>Dhanush Healthcare - EKS and Core Service Enablement:</b> Spearheaded technical enablement for a strategic partner by
@@ -310,6 +326,9 @@ and D&S escalations for languished cases [Valuefirst].
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline list-icons">
             <li class="list-inline-item">
+              <i class="devicons devicons-aws" title="AWS"></i>
+            </li>
+            <li class="list-inline-item">
               <i class="devicons devicons-java" title="Java"></i>
             </li>
             <li class="list-inline-item">
@@ -342,12 +361,16 @@ and D&S escalations for languished cases [Valuefirst].
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-check"></i>
-              AWS Services: EC2, VPC, S3, RDS, IAM, CF, BOQ analysis etc.</li>
+              AWS Services: EC2, VPC, S3, RDS, IAM, Cloudformation, ECS, EKS, Direct Connect, VPN, Transit Gateway, Network Firewall, Gateway Load Balancer, Route 53, Amazon Bedrock </li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              Architecture domains: Serverless Architecture,
+              Architecture domains: Serverless,
 Microservices, Security & Compliance, Data
-Lake/Warehouse, Disaster Recovery, etc.</li>
+Lake/Warehouse, Disaster Recovery, Analytics, Multi-Account/Multi-Region Design, Cost Optimization </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Technical domains: Network Architecture (BGP/Static Routing, SD-WAN, DX/TGW), Cost Modelling & TCO Analysis, Infrastructure
+as Code, Well-Architected Reviews </li>
             <li>
               <i class="fa-li fa fa-check"></i>
               Customer handling in severe and escalated situations</li>
@@ -446,24 +469,39 @@ Lake/Warehouse, Disaster Recovery, etc.</li>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Centralized Infrastructure setup</h3>
+              <h3 class="mb-0">Zero-Trust Dynamic Access Control at Scale</h3>
               <div class="subheading mb-3"></div>
               <p>
-		      Highly available centralized architecture setup in multi-account and multi-region scenario, allowing access to internet, on-prem and other VPC workloads via single central service VPC. Access to VPC endpoints (for SSM, S3, DDB, etc) and R53 resolver endpoints via one channel.
+				Architected a scalable, multi-account zero-trust network access solution using fully managed AWS services (Client VPN,
+Transit Gateway, Network Firewall, Lambda, DynamoDB) to enforce per-user, per-port access control with automated
+session lifecycle and full audit trail. Delivered a highly available, event-driven design supporting 400 users across 20
+accounts at ~$5/user/month — 50–75% cheaper than third-party ZTNA platforms — while eliminating operational
+overhead of managing per-account security rules.
+			  </p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Hub-and-Spoke Multi-Account Network Connectivity</h3>
+              <div class="subheading mb-3"></div>
+              <p>
+		      	Designed a highly available hub-and-spoke architecture enabling multi-account, multi-region workloads to route
+through a single central service VPC for internet egress, on-premises connectivity, shared VPC endpoints (SSM, S3,
+DDB), and Route 53 resolver access — consolidating networking resources and reducing per-account complexity.
               </p>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Centralized Inspection architecture</h3>
+              <h3 class="mb-0">Centralized Traffic Inspection for Egress and Ingress Workloads</h3>
               <div class="subheading mb-3"></div>
-              <p>
-		       - Deployment of centralized inspection system with AWS Network firewall using AWS Gateway Load balancer for Intrusion Prevention, Identity awareness and HTTPS inspection.  
-              </p>
-	      <p>
-		       - Deployment of centralized inspection system for ingress EKS workloads using Network Load Balancer with destination NAT implemented on Checkpoint firewalls.
-	      </p>
+				<p>
+					Deployed a dual-layer inspection architecture: (1) AWS Network Firewall with Gateway Load Balancer for egress traffic
+intrusion prevention, identity-aware filtering, and TLS/HTTPS inspection; (2) Network Load Balancer with destination
+NAT through Checkpoint firewalls for deep packet inspection of ingress traffic to EKS workloads.
+				</p>
             </div>
           </div>
 
