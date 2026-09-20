@@ -163,9 +163,9 @@ Engineered the solution to leverage an <b>S3 vector store</b>, realizing a <b>90
 databases (under $2,000/month at maximum capacity). The successful two-domain pilot achieved <b>over 90% accuracy</b>,
 leading to the customer's decision to expand to a full <b>73-disease implementation</b>.
 				</li>
-                <li>
+                <ul>
 					<b>Ministry of Women & Child Development (MWCD)</b>
-						<p>						
+						<li>						
 							<b>AI-Powered Nutritional Analysis for Poshan Tracker:</b> Built and
 demonstrated a POC using Amazon Bedrock (Claude) multimodal vision models to analyze meal photographs from
 Anganwadi Centers, automatically identifying food items, estimating portions, and scoring nutritional compliance
@@ -173,22 +173,22 @@ against ICDS norms. Fully serverless architecture (Bedrock, Lambda, S3, DynamoDB
 pay-per-use cost efficiency, and elastic scalability to 12L+ daily images across 14L centers serving ~9Cr beneficiaries</b>.
 The successful POC opened discussions on broader AI-driven image analysis use cases, including AI-based child
 height/weight estimation from images — currently in prospect stage.
-						</p>
-				  		<p>
+						</li>
+				  		<li>
 							<b> PMMVY Disaster Recovery Architecture:</b> Revised a stalled DR proposal 
 					for the PMMVY (Pradhan Mantri Matru Vandana Yojana) workload by re-architecting the proposed database offering from 
 					Aurora Standard to Aurora Headless in the DR region, achieving a >75% reduction in total DR cost while 
 					preserving RPO/RTO objectives. The optimized approach secured MWCD's acceptance of the DR solution after months of 
 					deadlock, unlocking formal approval to begin DR implementation.
-						</p>
-						<p>
+						</li>
+						<li>
 							<b> Poshan Tracker Cost Optimization Drive:</b> Led a comprehensive cost 
 					optimization review of the Poshan Tracker production workload, assessing the end-to-end architecture and infrastructure 
 					components to identify savings opportunities. Delivered a >30% reduction in monthly billing, with the largest gains from 
 					re-engineering the NAT Gateway setup — provisioning interface and gateway VPC endpoints to route internal traffic directly 
 					to AWS services instead of traversing the costlier NAT Gateway data path.
-						</p>
-				</li>
+						</li>
+				</ul>
 				<li>
 					<b>Quicko - Multi-Account Network Architecture Advisory:</b> Served as AWS Network Specialist reviewing Quicko's proposed multi-control-tower 
 					network design before organization-wide rollout. Recommended a centralized Transit Gateway hub-and-spoke model (shared via RAM) over 
