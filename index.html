@@ -165,7 +165,7 @@ leading to the customer's decision to expand to a full <b>73-disease implementat
 				</li>
                 <li>
 					<b>Ministry of Women & Child Development (MWCD)</b>
-						<li>						
+						<p>						
 							<b>AI-Powered Nutritional Analysis for Poshan Tracker:</b> Built and
 demonstrated a POC using Amazon Bedrock (Claude) multimodal vision models to analyze meal photographs from
 Anganwadi Centers, automatically identifying food items, estimating portions, and scoring nutritional compliance
@@ -173,24 +173,24 @@ against ICDS norms. Fully serverless architecture (Bedrock, Lambda, S3, DynamoDB
 pay-per-use cost efficiency, and elastic scalability to 12L+ daily images across 14L centers serving ~9Cr beneficiaries</b>.
 The successful POC opened discussions on broader AI-driven image analysis use cases, including AI-based child
 height/weight estimation from images — currently in prospect stage.
-						</li>
-				  		<li>
+						</p>
+				  		<p>
 							<b> PMMVY Disaster Recovery Architecture:</b> Revised a stalled DR proposal 
 					for the PMMVY (Pradhan Mantri Matru Vandana Yojana) workload by re-architecting the proposed database offering from 
 					Aurora Standard to Aurora Headless in the DR region, achieving a >75% reduction in total DR cost while 
 					preserving RPO/RTO objectives. The optimized approach secured MWCD's acceptance of the DR solution after months of 
 					deadlock, unlocking formal approval to begin DR implementation.
-						</li>
-						<li>
+						</p>
+						<p>
 							<b> Poshan Tracker Cost Optimization Drive:</b> Led a comprehensive cost 
 					optimization review of the Poshan Tracker production workload, assessing the end-to-end architecture and infrastructure 
 					components to identify savings opportunities. Delivered a >30% reduction in monthly billing, with the largest gains from 
 					re-engineering the NAT Gateway setup — provisioning interface and gateway VPC endpoints to route internal traffic directly 
 					to AWS services instead of traversing the costlier NAT Gateway data path.
-						</li>
+						</p>
 				</li>
 				<li>
-					Quicko - Multi-Account Network Architecture Advisory: Served as AWS Network Specialist reviewing Quicko's proposed multi-control-tower 
+					<b>Quicko - Multi-Account Network Architecture Advisory:</b> Served as AWS Network Specialist reviewing Quicko's proposed multi-control-tower 
 					network design before organization-wide rollout. Recommended a centralized Transit Gateway hub-and-spoke model (shared via RAM) over 
 					RAM subnet-sharing, preserving per-account workload isolation and avoiding CIDR exhaustion across a fast-growing estate (15-20 workloads 
 					per control tower). Designed centralized egress/inspection and shared-services VPCs with separate NAT Gateways per control tower for 
