@@ -161,16 +161,43 @@ work was essential to securing the deal and unlocking a further $18M in total cl
 designed and delivered a cost-optimized, multi-agent RAG chatbot utilizing <b>Strands SDK</b> and <b>Amazon Bedrock</b>.
 Engineered the solution to leverage an <b>S3 vector store</b>, realizing a <b>90% cost saving</b> compared to traditional vector
 databases (under $2,000/month at maximum capacity). The successful two-domain pilot achieved <b>over 90% accuracy</b>,
-leading to the customer's decision to expand to a full <b>73-disease implementation</b> by the end of 2025.
+leading to the customer's decision to expand to a full <b>73-disease implementation</b>.
 				</li>
                 <li>
-					<b>Ministry of Women & Child Development (MWCD) - AI-Powered Nutritional Analysis for Poshan Tracker:</b> Built and
+					<b>Ministry of Women & Child Development (MWCD)</b>
+						<li>						
+							<b>AI-Powered Nutritional Analysis for Poshan Tracker:</b> Built and
 demonstrated a POC using Amazon Bedrock (Claude) multimodal vision models to analyze meal photographs from
 Anganwadi Centers, automatically identifying food items, estimating portions, and scoring nutritional compliance
 against ICDS norms. Fully serverless architecture (Bedrock, Lambda, S3, DynamoDB) ensures <b>zero infra management,
 pay-per-use cost efficiency, and elastic scalability to 12L+ daily images across 14L centers serving ~9Cr beneficiaries</b>.
 The successful POC opened discussions on broader AI-driven image analysis use cases, including AI-based child
-height/weight estimation from images — currently in active development.
+height/weight estimation from images — currently in prospect stage.
+						</li>
+				  		<li>
+							<b> PMMVY Disaster Recovery Architecture:</b> Revised a stalled DR proposal 
+					for the PMMVY (Pradhan Mantri Matru Vandana Yojana) workload by re-architecting the proposed database offering from 
+					Aurora Standard to Aurora Headless in the DR region, achieving a >75% reduction in total DR cost while 
+					preserving RPO/RTO objectives. The optimized approach secured MWCD's acceptance of the DR solution after months of 
+					deadlock, unlocking formal approval to begin DR implementation.
+						</li>
+						<li>
+							<b> Poshan Tracker Cost Optimization Drive:</b> Led a comprehensive cost 
+					optimization review of the Poshan Tracker production workload, assessing the end-to-end architecture and infrastructure 
+					components to identify savings opportunities. Delivered a >30% reduction in monthly billing, with the largest gains from 
+					re-engineering the NAT Gateway setup — provisioning interface and gateway VPC endpoints to route internal traffic directly 
+					to AWS services instead of traversing the costlier NAT Gateway data path.
+						</li>
+				</li>
+				<li>
+					Quicko - Multi-Account Network Architecture Advisory: Served as AWS Network Specialist reviewing Quicko's proposed multi-control-tower 
+					network design before organization-wide rollout. Recommended a centralized Transit Gateway hub-and-spoke model (shared via RAM) over 
+					RAM subnet-sharing, preserving per-account workload isolation and avoiding CIDR exhaustion across a fast-growing estate (15-20 workloads 
+					per control tower). Designed centralized egress/inspection and shared-services VPCs with separate NAT Gateways per control tower for 
+					throughput headroom and per-business-unit cost attribution. For inter-entity connectivity carrying 1B+ internal API calls/month between 
+					sister entities (Quicko ↔ Sandbox), advised keeping traffic on the AWS backbone via TGW peering (or PrivateLink endpoint services for 
+					non-org consumers) and solved the public-DNS-over-internet gap with a Route 53 private hosted zone — enabling the same domain to resolve 
+					internally to private IPs while public resolution continued serving external customers.
 				</li>
                 <li>
 					<b>India Central Government and PSUs – Network setup expertise</b> Have been involved in some of the largest public sector opportunities like
@@ -188,8 +215,8 @@ directly accelerated the partner's technical readiness to support the critical w
 				</li> -->
                 <li>
 					<b>Workshops and Immersion days:</b> Delivered multiple sessions to different customers and partners including 2-day EKS enablement
-session to Dhanush Healthcare (CSAT 4.4), 1-day networking immersion day to Uplight (CSAT 4.6) and a session on CDN and Edge services to
-NIC officers at IIT campus, Greater Noida.
+session to Dhanush Healthcare (CSAT 4.4), 1-day networking immersion day to Uplight (CSAT 4.6), a session on network
+connectivity to EDF (CSAT 4.78), a session on CDN and Edge services to NIC officers at IIT campus (Greater Noida), and a full day AI workshop at AIIMS New Delhi (CSAT 4.42).
 				</li>
               </p>
             </div>
