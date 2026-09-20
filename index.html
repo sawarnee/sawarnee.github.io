@@ -175,6 +175,18 @@ leading to the customer's decision to expand to a full <b>73-disease implementat
 					<b>Ministry of Women & Child Development (MWCD)</b>
 				</li>
 					<ul>
+						<li>
+							<b>PMMVY Well-Architected Review & Architecture Optimization:</b> Conducted a comprehensive Well-Architected review of the 
+							production PMMVYSoft MIS, a multi-AZ, monolithic maternity-benefit DBT disbursement platform serving beneficiaries 
+							under the Mission Shakti scheme, and delivered a target architecture eliminating single points of failure across the web, 
+							mobile, external API, file server, and UIDAI/PFMS integration tiers. Identified that the 3-node web tier ran effectively 
+							single-active due to in-memory session state, and re-architected it around ElastiCache (Valkey) for externalized sessions 
+							plus Auto Scaling Groups to make all nodes active and multi-AZ. Right-sized the over-provisioned Aurora PostgreSQL read tier 
+							(replicas running under 10% CPU) with Aurora Auto Scaling, RDS Proxy connection pooling for faster failover, and explicit 
+							read/write splitting; consolidated 3x redundant NLB/WAF/ALB stacks into a single CloudFront + WAF + ALB edge with host-header 
+							routing; and retired a ~10TB single-instance file server in favor of EFS and lifecycle-tiered S3. The recommendations mapped 
+							every change to the AWS Well-Architected pillars, strengthening reliability and cost efficiency on a mission-critical government payment system.
+						</li>
 						<li>						
 							<b>AI-Powered Nutritional Analysis for Poshan Tracker:</b> Built and
 demonstrated a POC using Amazon Bedrock (Claude) multimodal vision models to analyze meal photographs from
@@ -186,7 +198,7 @@ height/weight estimation from images — currently in prospect stage.
 						</li>
 				  		<li>
 							<b> PMMVY Disaster Recovery Architecture:</b> Revised a stalled DR proposal 
-					for the PMMVY (Pradhan Mantri Matru Vandana Yojana) workload by re-architecting the proposed database offering from 
+					for the PMMVY workload by re-architecting the proposed database offering from 
 					Aurora Standard to Aurora Headless in the DR region, achieving a <b>75% reduction in total DR cost while 
 					preserving RPO/RTO objectives</b>. The optimized approach secured MWCD's acceptance of the DR solution after months of 
 					deadlock, unlocking formal approval to begin DR implementation.
